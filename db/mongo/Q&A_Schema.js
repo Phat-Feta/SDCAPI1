@@ -29,7 +29,7 @@ const Q_A_Schema = new Schema({
     questions: [QuestionSchema]
 });
 
-mongoose.connect('mongodb://127.0.0.1:27017/myapp');
+mongoose.connect('mongodb://127.0.0.1:27017/QA');
 
 const QAModel = mongoose.model('qa', Q_A_Schema);
 
