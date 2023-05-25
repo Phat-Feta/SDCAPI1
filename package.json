@@ -1,0 +1,24 @@
+{
+  "name": "sdc_qa_api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "posgres": "sudo service postgresql start && sudo -u postgres psql"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Phat-Feta/SDC_QA_API.git"
+  },
+  "author": "Cesar G.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Phat-Feta/SDC_QA_API/issues"
+  },
+  "homepage": "https://github.com/Phat-Feta/SDC_QA_API#readme",
+  "dependencies": {
+    "mongoose": "^7.2.0",
+    "pg": "^8.11.0"
+  }
+}
