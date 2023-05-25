@@ -1,6 +1,4 @@
-import mongoose from 'mongoose';
-const { Schema } = mongoose;
-
+const mongoose = require('mongoose');
 mongoose.connect('mongodb://127.0.0.1:27017/qa');
 const AnswersSchema = new Schema({
     id: Number,
@@ -32,3 +30,4 @@ const Q_A_Schema = new Schema({
 const QAModel = mongoose.model('qa', Q_A_Schema);
 
 module.exports = {QAModel};
+
