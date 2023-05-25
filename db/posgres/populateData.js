@@ -1,4 +1,0 @@
-const pg = require ('pg');
-
-
-

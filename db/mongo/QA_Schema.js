@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 const { Schema } = mongoose;
 
-
+mongoose.connect('mongodb://127.0.0.1:27017/qa');
 const AnswersSchema = new Schema({
     id: Number,
     body: String,
@@ -15,12 +15,12 @@ const AnswersSchema = new Schema({
 }, {timestamps:true});
 
 const QuestionSchema = new Schema({
-        id: Number,
-        body: String,
-        asker_name: String,
-        asker_email: String,
-        reported: Boolean,
-        answers: [AnswersSchema]
+    id: Number,
+    body: String,
+    asker_name: String,
+    asker_email: String,
+    reported: Boolean,
+    answers: [AnswersSchema]
 }, {timestamps:true});
 
 
@@ -29,10 +29,6 @@ const Q_A_Schema = new Schema({
     questions: [QuestionSchema]
 });
 
-mongoose.connect('mongodb://127.0.0.1:27017/myapp');
-
 const QAModel = mongoose.model('qa', Q_A_Schema);
 
-
-
-module.exports = {Q_A_Schema};
+module.exports = {QAModel};
