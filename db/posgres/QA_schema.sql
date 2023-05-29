@@ -29,8 +29,8 @@ CREATE TABLE Question (
     date_written VARCHAR(80),
     asker_name VARCHAR(60),
     asker_email VARCHAR(60),
-    reported BOOLEAN,
-    helpful INTEGER
+    reported BOOLEAN DEFAULT false,
+    helpful INTEGER DEFAULT 0
 );
 
 CREATE TABLE Answer(
@@ -49,6 +49,7 @@ CREATE TABLE Photo (
     answer_id INTEGER REFERENCES Answer(id),
     photo_url VARCHAR(300)
 );
+
 
 --Copy CSV files into db
 -- COPY Question from '/home/cesargua/hackreactor/Feta-cheese/SDC_QA_API/db/csv/questions.csv/questions.csv' DELIMITER ',' CSV HEADER;

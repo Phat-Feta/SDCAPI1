@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "posgres": "sudo service postgresql start && sudo -u postgres psql"
+    "posgres": "sudo service postgresql start && sudo -u postgres psql",
+    "server-dev": "nodemon ./server"
   },
   "repository": {
     "type": "git",
@@ -18,7 +19,14 @@
   },
   "homepage": "https://github.com/Phat-Feta/SDC_QA_API#readme",
   "dependencies": {
+    "bluebird": "^3.7.2",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
     "mongoose": "^7.2.0",
     "pg": "^8.11.0"
+  },
+  "devDependencies": {
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.22"
   }
 }
