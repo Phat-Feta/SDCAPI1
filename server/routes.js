@@ -11,7 +11,7 @@ router.get('/qa/questions/:question_id/answers', controllers.getAnswers);
 router.post('/qa/questions', controllers.postQuestion)
 
 //add answer to question
-router.post('/qa/questions/:question_id/answers');
+router.post('/qa/questions/:question_id/answers', controllers.postAnswer);
 
 //mark question as helpful
 router.put('/qa/questions/:question_id/helpful', controllers.markQuestionHelpful)
