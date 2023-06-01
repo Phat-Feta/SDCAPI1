@@ -2,3 +2,5 @@ node_modules
 db/csv
 .env
 SDC.pem
+SDC_2.pem
+QA.sql
