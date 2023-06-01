@@ -41,7 +41,7 @@ CREATE TABLE Answer(
     answerer_name VARCHAR(60),
     answerer_email  VARCHAR(60),
     reported BOOLEAN DEFAULT false,
-    helpful INTEGER DEFAULT 0
+    helpfulness INTEGER DEFAULT 0
 );
 
 CREATE TABLE Photo (
