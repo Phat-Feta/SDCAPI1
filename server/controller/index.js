@@ -9,10 +9,10 @@ const controllers = {
     getQuestions: async (req,res)=>{
         try {
             const response = await models.getQuestions(req.query);
-            for(let question of response.rows){
-                let answers = await models.getAnswers(question.question_id);
-                question.answers= helpers.transformAnswer(answers.rows);
-            }
+            // for(let question of response.rows){
+            //     let answers = await models.getAnswers(question.question_id);
+            //     question.answers= helpers.transformAnswer(answers.rows);
+            //  }
             // console.log(response.rows)
             res.send(response.rows).status(200)
             

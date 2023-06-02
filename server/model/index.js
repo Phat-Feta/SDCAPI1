@@ -3,9 +3,13 @@ const db = require('../../db')
 
 const models = {
     getQuestions: async (urlQuery)=>{
-        const queryStatement =`Select q.id as question_id, q.product_id, q.body as question_body, q.date_written as question_date, q.asker_name, q.helpful as question_helpfulness, q.reported \ 
-        from Question q where q.product_id=${urlQuery.product_id} AND q.reported=false LIMIT ${urlQuery.count||5};`;
+        // const queryStatement =`Select q.id as question_id, q.product_id, q.body as question_body, q.date_written as question_date, q.asker_name, q.helpful as question_helpfulness, q.reported \ 
+        // from Question q where q.product_id=${urlQuery.product_id} AND q.reported=false LIMIT ${urlQuery.count||5};`;
         
+        // const queryStatement =`Select q.id as question_id, q.product_id, q.body as question_body, q.date_written as question_date, q.asker_name, q.helpful as question_helpfulness, q.reported, JSON_AGG(ans.*) as Answers from Question q \
+        // FULL OUTER JOIN ans_photos ans on ans.question_id=q.id where q.product_id=${urlQuery.product_id} and q.reported=false GROUP BY q.id LIMIT ${urlQuery.count||5}`
+        const queryStatement= `Select * from ques_ans where product_id=${urlQuery.product_id} and reported=false LIMIT ${urlQuery.count||5}`
+
         // const queryStatement = `Select * from Question where product_id=${urlQuery.product_id} LIMIT 5;`
         
         // const queryStatement = `Select q.*, JSON_AGG(ans.*) as Answers from Question q \
